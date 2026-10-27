@@ -1,0 +1,9 @@
+{
+  "name": "sotet-night-experience-tickets",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sotet Night Experience Nyeri Edition ticket booking for Vercel",
+  "engines": { "node": ">=20" },
+  "scripts": { "dev": "vercel dev" },
+  "dependencies": {}
+}

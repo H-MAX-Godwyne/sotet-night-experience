@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#080a70">
+  <meta name="description" content="Book tickets for Sotet Night Experience — Nyeri Edition at DeKUT Freedom Hall.">
+  <title>Sotet Night Experience | Nyeri Edition</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="Sotet Night home"><span class="brand-mark">SN</span><span>SOTET <small>NIGHT EXPERIENCE</small></span></a>
+    <a class="nav-link" href="#tickets">Get tickets <span aria-hidden="true">↗</span></a>
+  </header>
+  <main>
+    <section class="hero wrap">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="pulse"></span> DEDAN KIMATHI UNIVERSITY PRESENTS</p>
+        <h1>SOTET NIGHT <em>EXPERIENCE</em></h1>
+        <p class="edition">NYERI EDITION</p>
+        <p class="intro">One night. Great music. Unforgettable memories. Secure your ticket now.</p>
+        <div class="event-facts">
+          <div><span class="fact-icon">◷</span><span><small>DATE</small><strong>Saturday, 31 Oct 2026</strong></span></div>
+          <div><span class="fact-icon">⌖</span><span><small>VENUE</small><strong>DeKUT Freedom Hall, Nyeri</strong></span></div>
+        </div>
+        <a class="button button-yellow" href="#tickets">Book your ticket <span>→</span></a>
+      </div>
+      <div class="poster-frame">
+        <img id="event-poster" src="/poster.png" alt="Sotet Night Experience Nyeri Edition event poster" onerror="this.parentElement.classList.add('poster-missing');this.style.display='none'">
+        <div class="poster-fallback"><span>31<br><small>OCT</small></span><h2>SOTET NIGHT<br>EXPERIENCE</h2><p>NYERI EDITION</p><small>DEKUT FREEDOM HALL</small></div>
+        <div class="poster-tag">THE NIGHT IS YOURS ✦</div>
+      </div>
+      <div class="hero-glow"></div>
+    </section>
+
+    <section class="wrap ticket-section" id="tickets">
+      <div class="section-heading"><div><p class="eyebrow">YOUR NIGHT STARTS HERE</p><h2>Choose your ticket</h2></div><p class="muted">Simple booking · M-Pesa payment</p></div>
+      <div class="ticket-grid">
+        <button class="ticket-card selected" data-ticket="advance_regular" type="button"><span class="ticket-label">ADVANCE</span><span class="ticket-name">Regular</span><strong>KSh 350</strong><span class="ticket-bottom">1 person <span>↗</span></span></button>
+        <button class="ticket-card" data-ticket="advance_couple" type="button"><span class="ticket-label">ADVANCE</span><span class="ticket-name">Couple</span><strong>KSh 600</strong><span class="ticket-bottom">2 people <span>↗</span></span></button>
+        <button class="ticket-card" data-ticket="gate_regular" type="button"><span class="ticket-label gate">GATE</span><span class="ticket-name">Regular</span><strong>KSh 400</strong><span class="ticket-bottom">1 person <span>↗</span></span></button>
+        <button class="ticket-card" data-ticket="gate_couple" type="button"><span class="ticket-label gate">GATE</span><span class="ticket-name">Couple</span><strong>KSh 700</strong><span class="ticket-bottom">2 people <span>↗</span></span></button>
+      </div>
+      <div class="booking-layout">
+        <form class="panel booking-form" id="booking-form">
+          <div class="panel-title"><span class="step">01</span><div><h3>Your booking details</h3><p>Tell us who the ticket is for.</p></div></div>
+          <label>Full name<input name="name" autocomplete="name" placeholder="Enter your full name" required minlength="2" maxlength="100"></label>
+          <div class="form-row">
+            <label>M-Pesa phone number<input name="phone" inputmode="tel" autocomplete="tel" placeholder="07XXXXXXXX" required></label>
+            <label>Email <span class="optional">(optional)</span><input name="email" type="email" autocomplete="email" placeholder="you@example.com"></label>
+          </div>
+          <label>Ticket quantity<select name="quantity" id="quantity"><option value="1">1 ticket</option><option value="2">2 tickets</option><option value="3">3 tickets</option><option value="4">4 tickets</option><option value="5">5 tickets</option><option value="6">6 tickets</option><option value="7">7 tickets</option><option value="8">8 tickets</option><option value="9">9 tickets</option><option value="10">10 tickets</option></select></label>
+          <div class="price-line"><span>Total to pay</span><strong id="total">KSh 350</strong></div>
+          <button class="button button-primary full" type="submit" id="book-button">Create booking <span>→</span></button>
+          <p class="tiny muted">Creating a booking does not mean payment is complete. Your ticket is confirmed only after the organiser verifies payment.</p>
+          <div class="notice" id="booking-message" role="status" aria-live="polite"></div>
+        </form>
+        <aside class="panel payment-panel">
+          <div class="panel-title"><span class="step">02</span><div><h3>Pay with M-Pesa</h3><p>Manual transaction verification</p></div></div>
+          <div class="mpesa-logo"><span class="mpesa-dot">M</span><div><strong>M-PESA</strong><small>PAY SAFELY</small></div></div>
+          <ol class="pay-steps"><li><span>1</span><p>Complete the booking form to receive your unique reference.</p></li><li><span>2</span><p>Pay the exact amount to the official event Till or Paybill shown after booking.</p></li><li><span>3</span><p>Enter the M-Pesa transaction code in the payment form.</p></li><li><span>4</span><p>The organiser checks the payment and confirms your ticket.</p></li></ol>
+          <div class="security-note"><span>♢</span><p>Never share your M-Pesa PIN. A transaction code alone does not prove payment.</p></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="wrap submit-section hidden" id="payment-section">
+      <div class="panel payment-submit">
+        <div class="panel-title"><span class="step">03</span><div><h3>Submit your M-Pesa transaction</h3><p>Link your payment to your booking.</p></div></div>
+        <div class="booking-summary" id="booking-summary"></div>
+        <div class="payment-instructions"><small>OFFICIAL PAYMENT DETAILS</small><strong id="pay-destination">Confirm the event's official Till or Paybill with the organiser</strong><span>Account/reference: <b id="pay-reference">SOTET</b></span><p>Only pay to a payment destination confirmed by the event organisers.</p></div>
+        <form id="payment-form">
+          <input type="hidden" name="reference" id="payment-booking-reference">
+          <label>M-Pesa transaction code<input name="transactionCode" required minlength="8" maxlength="16" autocapitalize="characters" placeholder="e.g. QWE12RTY34"></label>
+          <button class="button button-primary full" type="submit" id="payment-button">Submit for verification <span>→</span></button>
+          <div class="notice" id="payment-message" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </section>
+
+    <section class="wrap ticket-result hidden" id="ticket-result" aria-live="polite"></section>
+    <section class="wrap performers"><div><p class="eyebrow">THE LINE-UP</p><h2>Music. Energy. Good people.</h2><p class="muted">Featuring the performers announced on the event poster.</p></div><div class="performer-list"><span>Kalenjin Sotet Night</span><span>Japheee Kay</span><span>Zona Lastborn</span><span>DJ Twinboy</span><span>MC OCS wa Mogogo</span></div></section>
+  </main>
+  <footer><div class="wrap footer-inner"><span>© 2026 Sotet Night Experience · Nyeri Edition</span><a href="/admin.html">Event organiser login</a></div><p class="footer-note">Only tickets marked PAID after organiser verification are confirmed.</p></footer>
+  <script src="/app.js" defer></script>
+</body>
+</html>

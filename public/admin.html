@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Organiser dashboard | Sotet Night</title><link rel="stylesheet" href="/styles.css"></head>
+<body class="admin-body">
+<header class="topbar"><a class="brand" href="/"><span class="brand-mark">SN</span><span>SOTET <small>ORGANISER DASHBOARD</small></span></a><a class="nav-link" href="/">View website ↗</a></header>
+<main class="wrap admin-main">
+  <section class="admin-heading"><p class="eyebrow">EVENT MANAGEMENT</p><h1>Bookings dashboard</h1><p class="muted">Review transaction codes against the official M-Pesa statement before approving any ticket.</p></section>
+  <section class="panel admin-login" id="login-panel"><h2>Organiser sign in</h2><form id="login-form"><label>Admin password<input type="password" name="password" autocomplete="current-password" required></label><button class="button button-primary full" type="submit">Sign in securely →</button><div class="notice" id="login-message" role="status"></div></form></section>
+  <section id="dashboard" class="hidden">
+    <div class="admin-toolbar"><div class="filter-wrap"><label for="status-filter">Show</label><select id="status-filter"><option value="all">All bookings</option><option value="payment_submitted">Awaiting verification</option><option value="pending_payment">Awaiting payment</option><option value="paid">Paid</option><option value="rejected">Rejected</option></select></div><button class="button button-outline" id="refresh-button">↻ Refresh</button><button class="button button-outline" id="logout-button">Sign out</button></div>
+    <div class="stats-grid"><div class="stat-card"><small>BOOKINGS</small><strong id="stat-bookings">0</strong></div><div class="stat-card"><small>AWAITING CHECK</small><strong id="stat-pending">0</strong></div><div class="stat-card"><small>PAID BOOKINGS</small><strong id="stat-paid">0</strong></div><div class="stat-card"><small>VERIFIED REVENUE</small><strong id="stat-revenue">KSh 0</strong></div></div>
+    <div class="notice" id="admin-message" role="status"></div>
+    <div id="bookings-list" class="bookings-list"></div>
+  </section>
+</main>
+<footer><div class="wrap footer-inner"><span>Keep admin access private.</span><a href="/">Back to booking page</a></div></footer>
+<script src="/admin.js" defer></script>
+</body></html>
