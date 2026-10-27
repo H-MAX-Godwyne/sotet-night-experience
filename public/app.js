@@ -31,8 +31,8 @@ $("#booking-form").addEventListener("submit",async e=>{
     $("#payment-booking-reference").value=currentBooking.reference;
     $("#booking-summary").innerHTML=`<div><small>BOOKING REFERENCE</small><strong>${escapeHtml(currentBooking.reference)}</strong></div><div><small>AMOUNT DUE</small><strong>${money(currentBooking.total)}</strong></div><div><small>TICKET</small><strong>${escapeHtml(LABEL[currentBooking.ticketType])} × ${currentBooking.quantity}</strong></div><div><small>STATUS</small><strong>Awaiting payment</strong></div>`;
     const dest=window.EVENT_PAYMENT_DESTINATION;
-    $("#pay-destination").textContent=dest||"Ask the organiser for the official M-Pesa Till or Paybill";
-    $("#pay-reference").textContent=window.EVENT_PAYMENT_REFERENCE||"SOTET";
+    $("#pay-destination").textContent=dest||"0180617627";
+    $("#pay-reference").textContent=window.EVENT_PAYMENT_REFERENCE||"JOSEPH KIROBIA MWANGI";
     $("#payment-section").classList.remove("hidden");
     $("#ticket-result").classList.add("hidden");
     showMessage($("#booking-message"),"Booking created. Save your reference and follow the payment instructions below.","success");
